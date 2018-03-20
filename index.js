@@ -5,7 +5,11 @@ module.exports = function (jsobject) {
 function sort(obj) {
     const result = {};
     Object.keys(obj).sort().forEach((key) => {
-        result[key] = obj[key];
+        if (obj[key] != null && typeof obj[key] === "object") {
+            result[key] = sort(obj[key]);
+        } else {
+            result[key] = obj[key];
+        }
     });
     return result;
 }
