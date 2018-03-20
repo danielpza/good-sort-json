@@ -1,4 +1,4 @@
-# json-sort
+# good-sort-json
 
 Sort json the good way.
 
@@ -8,7 +8,7 @@ json is sorted as follows: literals, objects, arrays and then alphabetically.
 ## Example
 
 ```js
-const jsonSort = require("json-sort");
+const jsonSort = require("good-sort-json");
 console.log(jsonSort({
     id: "asdf",
     health: 98,
