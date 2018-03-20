@@ -68,4 +68,43 @@ describe("json-sort", () => {
 }`;
         result.should.be.eq(expected);
     });
+    it("should sort the readme example", () => {
+        const input = {
+            id: "asdf",
+            health: 98,
+            weapons: [{
+                type: "thrust",
+                damage: 57,
+            }],
+            alarms: ["12.30pm"],
+            armor: {
+                resistance: [{ type: "thrust", value: 100 }],
+                type: "leather",
+            },
+        };
+        const result = jsonSort(input);
+        const expected = `{
+  "health": 98,
+  "id": "asdf",
+  "armor": {
+    "type": "leather",
+    "resistance": [
+      {
+        "type": "thrust",
+        "value": 100
+      }
+    ]
+  },
+  "alarms": [
+    "12.30pm"
+  ],
+  "weapons": [
+    {
+      "damage": 57,
+      "type": "thrust"
+    }
+  ]
+}`;
+        result.should.be.eq(expected);
+    });
 });
