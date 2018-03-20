@@ -54,4 +54,18 @@ describe("json-sort", () => {
 }`;
         result.should.be.eq(expected);
     });
+    it("should put objects after values, and arrays after objects", () => {
+        const input = {
+            a: {},
+            b: [],
+            c: 3,
+        };
+        const result = jsonSort(input);
+        const expected = `{
+  "c": 3,
+  "a": {},
+  "b": []
+}`;
+        result.should.be.eq(expected);
+    });
 });
