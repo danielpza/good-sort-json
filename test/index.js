@@ -8,8 +8,7 @@ describe("json-sort", () => {
             a: 2,
         };
         const result = jsonSort(input);
-        const expected = `
-{
+        const expected = `{
   "a": 2,
   "b": "3"
 }`;
