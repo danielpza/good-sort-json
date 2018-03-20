@@ -1,0 +1,13 @@
+language: node_js
+
+node_js:
+  - "node"
+  - "8"
+
+deploy:
+  provider: npm
+  email: "danielpa9708@gmail.com"
+  api_key:
+    secure: uCuC+eui7+yibqrthCizi2oVHPBskIKCUt+bx8aFphVcNS2n3A5qoVN6kgfFr1i/mlNjvRegqFaL9y9X20WDVRHdo/LeNm8LsqmAa6WukNaZ1/eL+tHGBppoG60l0Lyin22+8B8OzzMnZs5iqLHXejb5ceIElIbR5uTkwwla3WT3aTTjjOJooCTR+P6uJ+z4djxzSsL1LyOamhjBZYlXB6Xf6f7FeVFmv4X3jPy7EG6pWnk+1ZCog73nyZenqQYhdAyMJrFstJDMMsmFN8bvQ3tvpS3wmpFEHnn2dEHqqKkaCHRUQTy8QyrNxN2Yy83VJqi3+53Rs0jSVxnf3sypDRjH6Vz3cB42+8jvpho39AzNav8nf2U156WXiJgmBbjmh065EN2KThRMwGNC4EvAw2/bipd99T5nmLr/qPwjqZ5QE9G5/16ekNE5Z+i6h+8DngB9Nn17CDsIMwj0zJof4dqjsE/C066KNBn1YIOJnHvMNdEEWyVvjHqQvbLg8Fm2KBznGj6iiYpAqSJbeIS9W4XZKpXpy+ttryKc09u2BEyYIzE+0Mg5s88VQTwKoO01DZTCQxn0LjEM+E5hc+XATtjj7J0xJDax8JstAywjM7QqdcjqV4SRPJfjSZPCvm01qEPUF4cdc13q8UX8zdfg+YLZSQVAq0gh63CMDJG+9wI=
+  on:
+    branch: master
