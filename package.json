@@ -6,6 +6,10 @@
   "scripts": {
     "test": "mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielpa9708/good-sort-json.git"
+  },
   "keywords": [],
   "author": "Daniel Perez Alvarez <danielpa9708@gmail.com> (https://github.com/danielpa9708)",
   "license": "ISC",
