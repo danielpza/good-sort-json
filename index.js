@@ -3,13 +3,38 @@ module.exports = function (jsobject) {
 };
 
 function sort(obj) {
+    const literals = [];
+    const objects = [];
+    const arrays = [];
     const result = Array.isArray(obj)? [] : {};
-    Object.keys(obj).sort().forEach((key) => {
-        if (obj[key] != null && typeof obj[key] === "object") {
+    Object.keys(obj).forEach((key) => {
+        if (Array.isArray(obj[key])) {
+            arrays.push(key);
+        } else if (isObj(obj[key])) {
+            objects.push(key);
+        } else {
+            literals.push(key);
+        }
+    });
+    return Object.assign(result,
+                         orderSort(obj, literals),
+                         orderSort(obj, objects),
+                         orderSort(obj, arrays),
+                        );
+}
+
+function orderSort(obj, keys) {
+    const result = Array.isArray(obj)? [] : {};
+    keys.sort().forEach((key) => {
+        if (isObj(obj[key])) {
             result[key] = sort(obj[key]);
         } else {
             result[key] = obj[key];
         }
     });
     return result;
+}
+
+function isObj(value) {
+    return value != null && typeof value === "object";
 }
