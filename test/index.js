@@ -34,4 +34,24 @@ describe("json-sort", () => {
 }`;
         result.should.be.eq(expected);
     });
+    it("should sort json with nested properties and arrays", () => {
+        const input = {
+            b: "3",
+            c: [
+                3,
+                1,
+            ],
+            a: 2,
+        };
+        const result = jsonSort(input);
+        const expected = `{
+  "a": 2,
+  "b": "3",
+  "c": [
+    3,
+    1
+  ]
+}`;
+        result.should.be.eq(expected);
+    });
 });
