@@ -3,7 +3,7 @@ module.exports = function (jsobject) {
 };
 
 function sort(obj) {
-    const result = {};
+    const result = Array.isArray(obj)? [] : {};
     Object.keys(obj).sort().forEach((key) => {
         if (obj[key] != null && typeof obj[key] === "object") {
             result[key] = sort(obj[key]);
