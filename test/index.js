@@ -107,4 +107,17 @@ describe("json-sort", () => {
 }`;
         result.should.be.eq(expected);
     });
+
+    it("should sort basic json with 4 spaces", () => {
+        const input = {
+            b: "3",
+            a: 2,
+        };
+        const result = jsonSort(input, { spaces: 4 });
+        const expected = `{
+    "a": 2,
+    "b": "3"
+}`;
+        result.should.be.eq(expected);
+    });
 });

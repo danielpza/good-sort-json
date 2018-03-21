@@ -1,5 +1,7 @@
-module.exports = function (jsobject) {
-    return JSON.stringify(sort(jsobject), null, 2);
+module.exports = function (jsobject, options) {
+    if (!options) options = {};
+    const spaces = options.spaces || 2;
+    return JSON.stringify(sort(jsobject), null, spaces);
 };
 
 function sort(obj) {
