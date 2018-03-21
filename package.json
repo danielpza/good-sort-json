@@ -1,6 +1,6 @@
 {
   "name": "good-sort-json",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Sort json the good way",
   "main": "index.js",
   "scripts": {
