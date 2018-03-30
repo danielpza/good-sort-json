@@ -19,7 +19,7 @@ describe("json-sort", () => {
             b: "3",
             c: {
                 b: 2,
-                a: 1
+                a: 1,
             },
             a: 2,
         };
@@ -37,10 +37,7 @@ describe("json-sort", () => {
     it("should sort json with nested properties and arrays", () => {
         const input = {
             b: "3",
-            c: [
-                3,
-                1,
-            ],
+            c: [3, 1],
             a: 2,
         };
         const result = jsonSort(input);
@@ -72,10 +69,12 @@ describe("json-sort", () => {
         const input = {
             id: "asdf",
             health: 98,
-            weapons: [{
-                type: "thrust",
-                damage: 57,
-            }],
+            weapons: [
+                {
+                    type: "thrust",
+                    damage: 57,
+                },
+            ],
             alarms: ["12.30pm"],
             armor: {
                 resistance: [{ type: "thrust", value: 100 }],
