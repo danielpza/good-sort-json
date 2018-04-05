@@ -4,7 +4,7 @@
   "description": "Sort json the good way",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   "author": "Daniel Perez Alvarez <danielpa9708@gmail.com> (https://github.com/danielpa9708)",
   "license": "ISC",
   "devDependencies": {
+    "ava": "^0.25.0",
     "chai": "^4.1.2",
     "mocha": "^5.0.0",
     "prettier": "^1.11.1"
