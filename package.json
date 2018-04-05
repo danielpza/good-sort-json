@@ -4,7 +4,8 @@
   "description": "Sort json the good way",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "test-watch": "ava --watch"
   },
   "repository": {
     "type": "git",
