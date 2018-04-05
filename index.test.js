@@ -1,4 +1,4 @@
-import test from "ava";
+const { test } = require("ava");
 const jsonSort = require(".");
 
 test("basic json", (t) => {
